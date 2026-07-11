@@ -1,0 +1,9 @@
+project: rhai
+target: fuzz_serde
+cmds:
+  - cmd: /mayhem/fuzz_serde
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/rhai_keywords.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_serde/testsuite

@@ -1,0 +1,9 @@
+project: rhai
+target: ast
+cmds:
+  - cmd: /mayhem/ast
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/rhai_keywords.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ast/testsuite
